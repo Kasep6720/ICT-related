@@ -1,0 +1,152 @@
+import os       #import os for library 
+import time
+
+#maintext = input("Write something...")
+
+def sub1():
+    # Sub-problem 1
+    print()
+    print("The original text is : " + maintext)
+    print()
+
+    # using split() to count words in string
+    res = len(maintext.split())
+    
+    print("Number of words : " + str(res))
+    print("Number of characters : ", len(maintext))
+    print()
+    input()    
+        
+def sub2():
+    # Sub-problem 2
+    countA = 0
+    print()
+    print("The Frequencies of letter: ")
+    for i in range(65,91):
+        for letter in maintext:
+            # count all letters
+            if letter == chr(i) or letter == chr(i+32):
+                countA = countA+1
+        print("Total number of ", chr(i),": ", countA) 
+        countA = 0
+    print()
+    input()
+   
+def sub3():
+    # Sub-problem 3
+    # input specific word UI
+    os.system('cls')  #clear screen
+    print()
+    print('**********************************************************')
+    print('***********************YLMASS*****************************')
+    print('*****************Composition Analyzer*********************')
+    print('*************Please input a specific word*****************')
+    print('**********************************************************')
+
+    # pls ignore
+    Nigger = input("Specific Word: ")
+    print()
+    LilNigger = Nigger.lower()
+        
+    def count(elements):
+        elements1 = elements.lower()
+        # check if each word has '.' at its last. If so then ignore '.'
+        if elements1[-1] == '.':
+            elements1 = elements1[0:len(elements1) - 1]
+            
+        if elements1 in allwordsintext:
+            allwordsintext[elements1] += 1
+     
+        # if the allwordsintext does not have the key as "elements" then create a key "elements" and assign its value to 1.
+        else:
+            allwordsintext.update({elements1: 1})
+    
+    allwordsintext = {}
+    
+    # split all the word of the string.
+    lst = maintext.split()
+    
+    # take each word from lst and pass it to the method count.
+    for elements in lst:
+        count(elements)
+     
+    # print the keys and its corresponding values.
+    for allKeys in allwordsintext:
+        
+        # just in case might need it
+        SmolallKeys = allKeys[0].lower() + allKeys[1:]
+    
+        if allKeys == LilNigger:
+            
+            print ("Frequency of", allKeys, end = " ")
+            print (":", end = " ")
+            print (allwordsintext[allKeys], end = " ")
+            print()
+        #else:
+            #print()
+            #print("The specific word is not found")
+            #print("Please try again")
+            #print()
+    input()
+
+datext = "text.txt"
+
+def bonus():
+    #Bonus  
+    print("")
+    print("Made by Kasep6720")
+    print("")
+    print("Reference:")
+    print("UI from Shiu Shiu")
+    print("https://www.geeksforgeeks.org/find-frequency-of-each-word-in-a-string-in-python/")
+    print("https://www.geeksforgeeks.org/python-program-to-calculate-the-number-of-words-and-characters-in-the-string/")
+    print("https://www.w3schools.com/python/python_try_except.asp")
+    print("")
+    print("Thank you!")
+    input()
+
+if __name__ == "__main__" :
+    choice = ''
+    while (choice!='F' and choice!='f'):
+        os.system('cls')  #clear screen
+        try:
+            f = open(datext, "r")
+            maintext = f.read()
+        except:
+            print("file not found, current text file reverted back to 'text.txt'")
+            datext = "text.txt"
+            time.sleep(1)
+            os.system('cls')  #clear screen
+        print('**********************************************************')
+        print('***********************YLMASS*****************************')
+        print('**************Composition Analyzer************************')
+        print('***************A.Number of words and characters **********')
+        print('***************B.Frequencies of letter *******************')
+        print('***************C.Frequencies of a given word *************')
+        print('***************D.Change File *****************************')
+        print('***************E.Credits *********************************')
+        print('***************F.Exit ************************************')
+        print('**********************************************************')
+        choice = input("Input a choice (A,B,C,D,E,F):    ")
+        while ((choice<'A') or (choice>'F')) and ((choice<'a') or (choice>'f')):
+            print("Input out of range, please input again.") 
+            choice = input("Input a choice (A,B,C,D,E,F):    ")
+        if (choice == 'A' or choice == 'a'):
+            sub1()
+        if (choice == 'B' or choice == 'b'):
+            sub2()
+        if (choice == 'C' or choice == 'c'):
+            sub3()
+        if (choice == 'D' or choice == 'd'):
+            os.system('cls')  #clear screen
+            print('**********************************************************')
+            print('***********************YLMASS*****************************')
+            print('*****************Composition Analyzer*********************')
+            print('******************Changing text file**********************')
+            print('**********************************************************')
+            print("Current text:", datext)
+            datext = input("Specific Word: ")
+        if (choice == 'E' or choice == 'e'):
+            bonus()
+    print('*************************Bye Bye!****************************')
+    
