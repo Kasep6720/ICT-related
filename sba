@@ -113,9 +113,11 @@ if __name__ == "__main__" :
             f = open(datext, "r")
             maintext = f.read()
         except:
-            print("file not found, current text file reverted back to 'text.txt'")
+            print("Error")
+            print("File not found, or language not supported")
+            print("Current text file reverted back to 'text.txt'")
             datext = "text.txt"
-            time.sleep(1)
+            time.sleep(2.2)
             os.system('cls')  #clear screen
         print('**********************************************************')
         print('***********************YLMASS*****************************')
