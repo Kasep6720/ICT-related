@@ -1,12 +1,13 @@
 import os       #import os for library 
 import time
 
-#maintext = input("Write something...")
+#maintext = input("Write something...") # No need anymore cuz we pro and use file instead of typing 
 
 def sub1():
     # Sub-problem 1
     print()
-    print("The original text is : " + maintext)
+    print("The original text : ")
+    print(maintext)
     print()
 
     # using split() to count words in string
@@ -82,14 +83,33 @@ def sub3():
             print (":", end = " ")
             print (allwordsintext[allKeys], end = " ")
             print()
-        #else:
-            #print()
-            #print("The specific word is not found")
-            #print("Please try again")
-            #print()
     input()
 
 datext = "text.txt"
+
+def sub4():
+    # Sub-problem 4
+    print()
+    print("The original text : ")
+    print(maintext)
+    print()
+    OrgSentence = maintext.count('.')+maintext.count('!')+maintext.count('?')+maintext.count('...')
+    Gays = maintext.count('Dr.')+maintext.count('Esq.')+maintext.count('Hon.')+maintext.count('Jr.')+maintext.count('Mr.')+maintext.count('Mrs.')+maintext.count('Ms.')+maintext.count('Messrs.')+maintext.count('Mmes.')+maintext.count('Msgr.')+maintext.count('Prof.')+maintext.count('Rev.')+maintext.count('Rt. Hon.')+maintext.count('Sr.')+maintext.count('St.')
+    print('Total number of sentences:',int(OrgSentence - Gays))
+    c = maintext.split('\n\n')
+    print('Total number of paragraphs:',len(c))
+    input()
+
+def sub5():
+    # Sub-problem 5
+    os.system('cls')  #clear screen
+    stupidassmffunctionwords=['a', 'about', 'above', 'across', 'after', 'afterwards', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'amoungst', 'an', 'and', 'another', 'any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere', 'are', 'around', 'as', 'at', 'be', 'became', 'because', 'been', 'before', 'beforehand', 'behind', 'being', 'below', 'beside', 'besides', 'between', 'beyond', 'both', 'but', 'by', 'can', 'cannot', 'could', 'dare', 'despite', 'did', 'do', 'does', 'done', 'down', 'during', 'each', 'eg', 'either', 'else', 'elsewhere', 'enough', 'etc', 'even', 'ever', 'every', 'everyone', 'everything', 'everywhere', 'except', 'few', 'first', 'for', 'former', 'formerly', 'from', 'further', 'furthermore', 'had', 'has', 'have', 'he', 'hence', 'her', 'here', 'hereabouts', 'hereafter', 'hereby', 'herein', 'hereinafter', 'heretofore', 'hereunder', 'hereupon', 'herewith', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'however', 'i', 'ie', 'if', 'in', 'indeed', 'inside', 'instead', 'into', 'is', 'it', 'its', 'itself', 'last', 'latter', 'latterly', 'least', 'less', 'lot', 'lots', 'many', 'may', 'me', 'meanwhile', 'might', 'mine', 'more', 'moreover', 'most', 'mostly', 'much', 'must', 'my', 'myself', 'namely', 'near', 'need', 'neither', 'never', 'nevertheless', 'next', 'no', 'nobody', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of', 'off', 'often', 'oftentimes', 'on', 'once', 'one', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'ought', 'our', 'ours', 'ourselves', 'out', 'outside', 'over', 'per', 'perhaps', 'rather', 're', 'same', 'second', 'several', 'shall', 'she', 'should', 'since', 'so', 'some', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhat', 'somewhere', 'still', 'such', 'than', 'that', 'the', 'their', 'theirs', 'them', 'themselves', 'then', 'thence', 'there', 'thereabouts', 'thereafter', 'thereby', 'therefore', 'therein', 'thereof', 'thereon', 'thereupon', 'these', 'they', 'third', 'this', 'those', 'though', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'top', 'toward', 'towards', 'under', 'until', 'up', 'upon', 'us', 'used', 'very', 'via', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whence', 'whenever', 'where', 'whereafter', 'whereas', 'whereby', 'wherein', 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'whyever', 'will', 'with', 'within', 'without', 'would', 'yes', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves']
+    d = maintext.split()
+    print('Total number of function words:')
+    for j in range(len(stupidassmffunctionwords)):
+        if d.count(stupidassmffunctionwords[j]) >= 1:
+            print(stupidassmffunctionwords[j],d.count(stupidassmffunctionwords[j]))
+    input()
 
 def bonus():
     #Bonus  
@@ -98,6 +118,7 @@ def bonus():
     print("")
     print("Reference:")
     print("UI from Shiu Shiu")
+    print("Some codes from bd")
     print("https://www.geeksforgeeks.org/find-frequency-of-each-word-in-a-string-in-python/")
     print("https://www.geeksforgeeks.org/python-program-to-calculate-the-number-of-words-and-characters-in-the-string/")
     print("https://www.w3schools.com/python/python_try_except.asp")
@@ -107,7 +128,7 @@ def bonus():
 
 if __name__ == "__main__" :
     choice = ''
-    while (choice!='F' and choice!='f'):
+    while (choice!='H' and choice!='h'):
         os.system('cls')  #clear screen
         try:
             f = open(datext, "r")
@@ -122,17 +143,19 @@ if __name__ == "__main__" :
         print('**********************************************************')
         print('***********************YLMASS*****************************')
         print('**************Composition Analyzer************************')
-        print('***************A.Number of words and characters **********')
-        print('***************B.Frequencies of letter *******************')
-        print('***************C.Frequencies of a given word *************')
-        print('***************D.Change File *****************************')
-        print('***************E.Credits *********************************')
-        print('***************F.Exit ************************************')
+        print('************A.Total Number of words and characters *******')
+        print('************B.Frequencies of letter **********************')
+        print('************C.Frequencies of a given word ****************')
+        print('************D.Total Number of sentences and paragraphs****')
+        print('************E.Total Number of function word **************')
+        print('************F.Change File ********************************')
+        print('************G.Credits ************************************')
+        print('************H.Exit ***************************************')
         print('**********************************************************')
-        choice = input("Input a choice (A,B,C,D,E,F):    ")
-        while ((choice<'A') or (choice>'F')) and ((choice<'a') or (choice>'f')):
+        choice = input("Input a choice (A,B,C,D,E,F,G,H,):    ")
+        while ((choice<'A') or (choice>'H')) and ((choice<'a') or (choice>'h')):
             print("Input out of range, please input again.") 
-            choice = input("Input a choice (A,B,C,D,E,F):    ")
+            choice = input("Input a choice (A,B,C,D,E,F,G,H):    ")
         if (choice == 'A' or choice == 'a'):
             sub1()
         if (choice == 'B' or choice == 'b'):
@@ -140,6 +163,10 @@ if __name__ == "__main__" :
         if (choice == 'C' or choice == 'c'):
             sub3()
         if (choice == 'D' or choice == 'd'):
+            sub4()
+        if (choice == 'E' or choice == 'e'):
+            sub5()
+        if (choice == 'F' or choice == 'f'):
             os.system('cls')  #clear screen
             print('**********************************************************')
             print('***********************YLMASS*****************************')
@@ -147,8 +174,8 @@ if __name__ == "__main__" :
             print('******************Changing text file**********************')
             print('**********************************************************')
             print("Current text:", datext)
-            datext = input("Specific Word: ")
-        if (choice == 'E' or choice == 'e'):
+            datext = input("Text File Name: ")
+        if (choice == 'G' or choice == 'g'):
             bonus()
     print('*************************Bye Bye!****************************')
     
