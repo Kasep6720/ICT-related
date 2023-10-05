@@ -122,6 +122,7 @@ def bonus():
     print("https://www.geeksforgeeks.org/find-frequency-of-each-word-in-a-string-in-python/")
     print("https://www.geeksforgeeks.org/python-program-to-calculate-the-number-of-words-and-characters-in-the-string/")
     print("https://www.w3schools.com/python/python_try_except.asp")
+    print("https://www.btb.termiumplus.gc.ca/tpv2guides/guides/wrtps/index-eng.html?lang=eng&lettr=indx_catlog_a&page=9NBnYuQ324Yc.html")
     print("")
     print("Thank you!")
     input()
