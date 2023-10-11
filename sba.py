@@ -85,8 +85,6 @@ def sub3():
             print()
     input()
 
-datext = "text.txt"
-
 def sub4():
     # Sub-problem 4
     print()
@@ -127,6 +125,8 @@ def bonus():
     print("Thank you!")
     input()
 
+datext = "text.txt"
+
 if __name__ == "__main__" :
     choice = ''
     while (choice!='H' and choice!='h'):
@@ -137,38 +137,8 @@ if __name__ == "__main__" :
         except:
             print("Error")
             print("File not found, or language not supported")
-            print("Current text file reverted back to 'text.txt'")
-            datext = "text.txt"
+            print("Please enter another .txt file")
             time.sleep(2.2)
-            os.system('cls')  #clear screen
-        print('**********************************************************')
-        print('***********************YLMASS*****************************')
-        print('**************Composition Analyzer************************')
-        print('************A.Total Number of words and characters *******')
-        print('************B.Frequencies of letter **********************')
-        print('************C.Frequencies of a given word ****************')
-        print('************D.Total Number of sentences and paragraphs****')
-        print('************E.Total Number of function word **************')
-        print('************F.Change File ********************************')
-        print('************G.Credits ************************************')
-        print('************H.Exit ***************************************')
-        print('**********************************************************')
-        choice = input("Input a choice (A,B,C,D,E,F,G,H,):    ")
-        while ((choice<'A') or (choice>'H')) and ((choice<'a') or (choice>'h')):
-            print("Input out of range, please input again.") 
-            choice = input("Input a choice (A,B,C,D,E,F,G,H):    ")
-        if (choice == 'A' or choice == 'a'):
-            sub1()
-        if (choice == 'B' or choice == 'b'):
-            sub2()
-        if (choice == 'C' or choice == 'c'):
-            sub3()
-        if (choice == 'D' or choice == 'd'):
-            sub4()
-        if (choice == 'E' or choice == 'e'):
-            sub5()
-        if (choice == 'F' or choice == 'f'):
-            os.system('cls')  #clear screen
             print('**********************************************************')
             print('***********************YLMASS*****************************')
             print('*****************Composition Analyzer*********************')
@@ -176,7 +146,46 @@ if __name__ == "__main__" :
             print('**********************************************************')
             print("Current text:", datext)
             datext = input("Text File Name: ")
-        if (choice == 'G' or choice == 'g'):
-            bonus()
+            os.system('cls')  #clear screen
+        else:
+            f = open(datext, "r")
+            maintext = f.read()
+            print('**********************************************************')
+            print('***********************YLMASS*****************************')
+            print('**************Composition Analyzer************************')
+            print('************A.Total Number of words and characters *******')
+            print('************B.Frequencies of letter **********************')
+            print('************C.Frequencies of a given word ****************')
+            print('************D.Total Number of sentences and paragraphs****')
+            print('************E.Total Number of function word **************')
+            print('************F.Change File ********************************')
+            print('************G.Credits ************************************')
+            print('************H.Exit ***************************************')
+            print('**********************************************************')
+            choice = input("Input a choice (A,B,C,D,E,F,G,H,):    ")
+            while ((choice<'A') or (choice>'H')) and ((choice<'a') or (choice>'h')):
+                print("Input out of range, please input again.") 
+                choice = input("Input a choice (A,B,C,D,E,F,G,H):    ")
+            if (choice == 'A' or choice == 'a'):
+                sub1()
+            if (choice == 'B' or choice == 'b'):
+                sub2()
+            if (choice == 'C' or choice == 'c'):
+                sub3()
+            if (choice == 'D' or choice == 'd'):
+                sub4()
+            if (choice == 'E' or choice == 'e'):
+                sub5()
+            if (choice == 'F' or choice == 'f'):
+                os.system('cls')  #clear screen
+                print('**********************************************************')
+                print('***********************YLMASS*****************************')
+                print('*****************Composition Analyzer*********************')
+                print('******************Changing text file**********************')
+                print('**********************************************************')
+                print("Current text:", datext)
+                datext = input("Text File Name: ")
+            if (choice == 'G' or choice == 'g'):
+                bonus()
     print('*************************Bye Bye!****************************')
     
