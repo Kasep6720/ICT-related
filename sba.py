@@ -74,7 +74,7 @@ def sub3():
     # print the keys and its corresponding values.
     for allKeys in allwordsintext:
         
-        # just in case might need it
+        # just in case might need it somewhere
         SmolallKeys = allKeys[0].lower() + allKeys[1:]
     
         if allKeys == LilNigger:
