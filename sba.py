@@ -74,7 +74,7 @@ def sub3():
     # print the keys and its corresponding values.
     for allKeys in allwordsintext:
         
-        # just in case might need it somewhere
+        # just in case might need it somewhere someday
         SmolallKeys = allKeys[0].lower() + allKeys[1:]
     
         if allKeys == LilNigger:
@@ -91,10 +91,10 @@ def sub4():
     print("The original text : ")
     print(maintext)
     print()
-    OrgSentence = maintext.count('.')+maintext.count('!')+maintext.count('?')+maintext.count('...')
+    OrgSentence = maintext.count('.')+maintext.count('!')+maintext.count('?')+maintext.count('...') #Just count the punctuations and subtract those dumb special cases that made those punctuation marks doesnt count as the end of a sentence.
     Gays = maintext.count('Dr.')+maintext.count('Esq.')+maintext.count('Hon.')+maintext.count('Jr.')+maintext.count('Mr.')+maintext.count('Mrs.')+maintext.count('Ms.')+maintext.count('Messrs.')+maintext.count('Mmes.')+maintext.count('Msgr.')+maintext.count('Prof.')+maintext.count('Rev.')+maintext.count('Rt. Hon.')+maintext.count('Sr.')+maintext.count('St.')
     print('Total number of sentences:',int(OrgSentence - Gays))
-    c = maintext.split('\n\n')
+    c = maintext.split('\n\n') #Just count lines that separates paragraphs lol
     print('Total number of paragraphs:',len(c))
     input()
 
@@ -102,11 +102,11 @@ def sub5():
     # Sub-problem 5
     os.system('cls')  #clear screen
     stupidassmffunctionwords=['a', 'about', 'above', 'across', 'after', 'afterwards', 'again', 'against', 'all', 'almost', 'alone', 'along', 'already', 'also', 'although', 'always', 'am', 'among', 'amongst', 'amoungst', 'an', 'and', 'another', 'any', 'anyhow', 'anyone', 'anything', 'anyway', 'anywhere', 'are', 'around', 'as', 'at', 'be', 'became', 'because', 'been', 'before', 'beforehand', 'behind', 'being', 'below', 'beside', 'besides', 'between', 'beyond', 'both', 'but', 'by', 'can', 'cannot', 'could', 'dare', 'despite', 'did', 'do', 'does', 'done', 'down', 'during', 'each', 'eg', 'either', 'else', 'elsewhere', 'enough', 'etc', 'even', 'ever', 'every', 'everyone', 'everything', 'everywhere', 'except', 'few', 'first', 'for', 'former', 'formerly', 'from', 'further', 'furthermore', 'had', 'has', 'have', 'he', 'hence', 'her', 'here', 'hereabouts', 'hereafter', 'hereby', 'herein', 'hereinafter', 'heretofore', 'hereunder', 'hereupon', 'herewith', 'hers', 'herself', 'him', 'himself', 'his', 'how', 'however', 'i', 'ie', 'if', 'in', 'indeed', 'inside', 'instead', 'into', 'is', 'it', 'its', 'itself', 'last', 'latter', 'latterly', 'least', 'less', 'lot', 'lots', 'many', 'may', 'me', 'meanwhile', 'might', 'mine', 'more', 'moreover', 'most', 'mostly', 'much', 'must', 'my', 'myself', 'namely', 'near', 'need', 'neither', 'never', 'nevertheless', 'next', 'no', 'nobody', 'none', 'noone', 'nor', 'not', 'nothing', 'now', 'nowhere', 'of', 'off', 'often', 'oftentimes', 'on', 'once', 'one', 'only', 'onto', 'or', 'other', 'others', 'otherwise', 'ought', 'our', 'ours', 'ourselves', 'out', 'outside', 'over', 'per', 'perhaps', 'rather', 're', 'same', 'second', 'several', 'shall', 'she', 'should', 'since', 'so', 'some', 'somehow', 'someone', 'something', 'sometime', 'sometimes', 'somewhat', 'somewhere', 'still', 'such', 'than', 'that', 'the', 'their', 'theirs', 'them', 'themselves', 'then', 'thence', 'there', 'thereabouts', 'thereafter', 'thereby', 'therefore', 'therein', 'thereof', 'thereon', 'thereupon', 'these', 'they', 'third', 'this', 'those', 'though', 'through', 'throughout', 'thru', 'thus', 'to', 'together', 'too', 'top', 'toward', 'towards', 'under', 'until', 'up', 'upon', 'us', 'used', 'very', 'via', 'was', 'we', 'well', 'were', 'what', 'whatever', 'when', 'whence', 'whenever', 'where', 'whereafter', 'whereas', 'whereby', 'wherein', 'whereupon', 'wherever', 'whether', 'which', 'while', 'whither', 'who', 'whoever', 'whole', 'whom', 'whose', 'why', 'whyever', 'will', 'with', 'within', 'without', 'would', 'yes', 'yet', 'you', 'your', 'yours', 'yourself', 'yourselves']
-    d = maintext.split()
+    dd = maintext.split()
     print('Total number of function words:')
-    for j in range(len(stupidassmffunctionwords)):
-        if d.count(stupidassmffunctionwords[j]) >= 1:
-            print(stupidassmffunctionwords[j],d.count(stupidassmffunctionwords[j]))
+    for j in range(len(stupidassmffunctionwords)): #Guess its obvious I don't need to explain.
+        if dd.count(stupidassmffunctionwords[j]) >= 1:
+            print(stupidassmffunctionwords[j],dd.count(stupidassmffunctionwords[j]))
     input()
 
 def bonus():
