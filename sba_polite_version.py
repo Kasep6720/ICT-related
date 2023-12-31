@@ -52,7 +52,7 @@ def sub3():
     def count(elements):
         elements1 = elements.lower()
         # check if each word has '.' at its last. If so then ignore '.'
-        if elements1[-1] == '.':
+        if elements1[-1] == '.' or elements1[-1] == ',' or elements1[-1] == '?' or elements1[-1] == '!':
             elements1 = elements1[0:len(elements1) - 1]
             
         if elements1 in allwordsintext:
